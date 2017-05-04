@@ -19,6 +19,15 @@ const APIUtil = {
         followee_id: id
       },
     });
+  },
+
+  searchUsers: (queryVal) => {
+    return $.ajax({
+      url: "/users/search",
+      method: "GET",
+      dataType: "JSON",
+      data: queryVal,
+    });
   }
 };
 
